@@ -1,15 +1,24 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { toggleMenu } from '../utils/NavSlice'
 
 const Head = ()=> {
+  
+    const dispatch = useDispatch()
+    const toggleHandler=()=>{
+        dispatch(toggleMenu());
+    }
+    
     return (
         <>
         <div className= ' grid grid-flow-col p-2 m-2 shadow-lg'>
         <div className='col-span-1 flex'>
     
+    
             <img
-            className='h-8 cursor-pointer'
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png" alt="navbar logo" />
-        
+             onClick={()=>toggleHandler()}
+             className='h-8  mx-2 cursor-pointer'
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png" alt="menu logo" />
             <img
              className='h-8  mx-2 cursor-pointer'
              src="https://logolook.net/wp-content/uploads/2021/06/Youtube-Logo.png" alt="youtube logo" />
