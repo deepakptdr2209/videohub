@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import appStore from '../utils/AppStore'
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
     const isMenuOpen = useSelector(store=>store.app.isMenuOpen);
@@ -10,9 +11,9 @@ function Sidebar() {
     return (
         <>
         
-        <div className='shadow-xl m-2 p-2 w-72 '>
+        <div className='shadow-xl m-2 p-2 w-56 '>
           <ul className='p-2 m-2 cursor-pointer'>
-            <li className='hover:bg-gray-500'>Home</li>
+            <li className='hover:bg-gray-500'><Link to="/">Home</Link></li>
             <li className='hover:bg-gray-500'>Shorts</li>
             <li className='hover:bg-gray-500'>Music</li>
           </ul>
