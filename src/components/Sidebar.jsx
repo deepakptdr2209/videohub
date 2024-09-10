@@ -11,7 +11,7 @@ function Sidebar() {
     return (
         <>
         
-        <div className='shadow-xl m-2 p-2 w-56 '>
+        <div className='shadow-xl mt-8 pt-8 mx-2 px-2 w-56 '>
           <ul className='p-2 m-2 cursor-pointer'>
             <li className='hover:bg-gray-500'><Link to="/">Home</Link></li>
             <li className='hover:bg-gray-500'>Shorts</li>

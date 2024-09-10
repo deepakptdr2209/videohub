@@ -13,7 +13,7 @@ function WatchPage() {
         dispatch(closeMenu())
     },[])
     return (
-        <div className='flex'>
+        <div className='flex mt-8 pt-8'>
             <div className='p-2 m-2 shadow-lg rounded-lg'> 
             <iframe 
             width="900" 
